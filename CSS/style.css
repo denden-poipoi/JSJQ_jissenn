@@ -18,6 +18,7 @@ nav ul li a {
 
 #top {
   position: relative;
+  height: 600px;
 }
 
 .top_wrap h1 {
@@ -91,10 +92,11 @@ nav ul li a {
   text-align: center;
   position: relative;
   z-index: 5;
+
 }
 
 .slick-dots li {
-  margin: 0 5px;
+  margin: 0 6px;
   display: inline-block;
 }
 
@@ -104,6 +106,8 @@ nav ul li a {
   border-radius: 50%;
   outline: none;
   display: block;
+  width: 15px;
+  height: 15px;
 }
 
 .slick-dots .slick-active button {
@@ -297,4 +301,69 @@ textarea {
   top: 0;
   left: 0;
   z-index: 9999;
+}
+
+
+
+
+
+
+/* fadeUp */
+.fadeUp {
+  animation: fadeUpAnime 0.8s forwards; /* fadeUpAnimeを0.8秒で一回実行 */
+  opacity: 0;
+}
+
+/* fadeLeft */
+.fadeLeft {
+  animation: fadeLeftAnime 0.8s forwards; /* fadeLeftAnimeを0.8秒で一回実行 */
+  opacity: 0;
+  overflow: hidden;
+}
+
+/* fadeRight */
+.fadeRight {
+  animation: fadeRightAnime 0.8s forwards; /* fadeRightAnimeを0.8秒で一回実行 */
+  opacity: 0;
+  overflow: hidden;
+}
+
+.fadeUpTrigger, .fadeLeftTrigger, .fadeRightTrigger {
+  opacity: 0; /* 初めは見えないようにしておく */
+}
+
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0; /* 初めは見えないようにしておく */
+    transform: translateY(100px); /* 100px下に動かしておく */
+  }
+
+  to {
+    opacity: 1; /* 可視化する */
+    transform: translateY(0); /* 元の位置に戻す */
+  }
+}
+
+@keyframes fadeLeftAnime {
+  from {
+    opacity: 0; /* 初めは見えないようにしておく */
+    transform: translateX(100px);/* 100px右に動かしておく */
+  }
+
+  to {
+    opacity: 1; /* 可視化する */
+    transform: translateX(0); /* 元の位置に戻す */
+  }
+}
+
+@keyframes fadeRightAnime {
+  from {
+    opacity: 0; /* 初めは見えないようにしておく */
+    transform: translateX(-100px);/* 100px左に動かしておく */
+  }
+
+  to {
+    opacity: 1; /* 可視化する */
+    transform: translateX(0); /* 元の位置に戻す */
+  }
 }
